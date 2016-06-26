@@ -7,7 +7,6 @@ RUN  apt-get update && apt-get install -y \
 	python-pip \
 	python-dev \
 	python-psycopg2 \
-	unoconv \
 	python-lxml \
 && rm -rf /var/lib/apt/lists/*
 
