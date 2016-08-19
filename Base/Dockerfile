@@ -26,4 +26,11 @@ RUN pip install trytond
 #running the server
 EXPOSE 8000
 
-ENTRYPOINT ["/usr/local/bin/trytond"]
+# default environment for the server
+COPY trytond.conf /
+
+COPY docker_entrypoint.sh /
+
+ENTRYPOINT ["/docker_entrypoint.sh"]
+
+CMD ["trytond"]
