@@ -29,8 +29,10 @@ EXPOSE 8000
 # default environment for the server
 COPY trytond.conf /
 
-COPY docker_entrypoint.sh /
+COPY docker-entrypoint.sh /
 
-ENTRYPOINT ["/docker_entrypoint.sh"]
+RUN chmod +x /docker-entrypoint.sh
+
+ENTRYPOINT ["/docker-entrypoint.sh"]
 
 CMD ["trytond"]
