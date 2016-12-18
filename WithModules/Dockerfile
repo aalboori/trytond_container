@@ -7,8 +7,12 @@ RUN  apt-get update && apt-get install -y \
 	unoconv \
 && rm -rf /var/lib/apt/lists/*
 
+#download list of modules
+
+RUN wget https://downloads.tryton.org/modules.txt
+
+RUN sed 's/^.*/trytond_&/' modules.txt
 
 # install additional modules
-COPY modules.txt /
 
 RUN pip install --requirement  modules.txt
