@@ -11,7 +11,7 @@ RUN  apt-get update && apt-get install -y \
 
 ADD https://downloads.tryton.org/modules.txt /
 
-RUN sed 's/^.*/trytond_&/' modules.txt
+RUN sed -i 's/^.*/trytond_&/' modules.txt
 
 # install additional modules
 
