@@ -37,6 +37,8 @@ RUN pip install \
 	polib \
 	python-sql \
 	python-levenshtein \
+	polib \
+	wrapt \
 	simplejson \
 	pydot
 
