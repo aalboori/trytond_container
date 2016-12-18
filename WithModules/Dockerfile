@@ -9,7 +9,7 @@ RUN  apt-get update && apt-get install -y \
 
 #download list of modules
 
-RUN wget https://downloads.tryton.org/modules.txt
+ADD https://downloads.tryton.org/modules.txt /
 
 RUN sed 's/^.*/trytond_&/' modules.txt
 
