@@ -5,6 +5,9 @@ MAINTAINER  Ahmed AlBoori <ahmed.boori@gmail.com>
 #install pre-requisites using apt
 RUN  apt-get update && apt-get install -y \
 	unoconv \
+	libldap2-dev \
+	libsasl2-dev \
+	libssl-dev \
 && rm -rf /var/lib/apt/lists/*
 
 #download list of modules
